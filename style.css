@@ -1,6 +1,9 @@
 :root {
-    --couleur1:#a5cfd6;
-
+    --couleur-fond:#ccd5ff;
+    --couleur-livre: #e4e9feda;
+    --couleur-ombre: #1d2131;
+    --couleur-button-fond: #54f98d;
+    --couleur-button-police: #ffffff;
 } 
 
 
@@ -15,6 +18,7 @@
 
 html, body {
     height: 100%;
+    margin-right: 0.5em;
 }
 
 
@@ -24,7 +28,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: var(--couleur1);
+    background-color: var(--couleur-fond);
 }
 
 
@@ -34,7 +38,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    margin: 0.5em;
     width: 100%;
+
+
+    background-color: var(--couleur-livre);
+    border-radius: 1.5rem;
+    box-shadow: 0.5rem 0.5rem var(--couleur-ombre);
+    border: 0.15rem solid var(--couleur-ombre);
+
 
     @media (max-width: 768px) {
     display: flex;
@@ -49,6 +61,8 @@ header {
     flex-direction: column;
     max-width: 30%;
     height: auto;
+    text-align: left;
+    font-size: 0.85em;
 
     @media (max-width: 768px) {
         max-width: 100%;
@@ -76,16 +90,42 @@ img {
         margin-top: 1em;
     }
 }
-.navigation ul {
+
+
+
+.navigation>ul {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
     list-style: none;
 
+    @media (max-width: 768px) {
+        justify-content: space-around;
+    }
 }
 
 
 
 .navigation>ul>li {
     margin: 0em 1em;
+}
+
+
+nav>ul>li>a {
+    margin : 1em;
+    text-decoration: none;
+    padding: 0.5em;
+
+
+@media (max-width: 600px) {
+    front-size: 1em;
+}
+}
+
+
+
+a:hover {
+    background-color: var(--couleur-button-fond);
+    color: var(--couleur-button-police);
+    border-radius: 0.75rem;
 }
