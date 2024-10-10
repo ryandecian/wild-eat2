@@ -36,6 +36,8 @@ body {
 
 
 
+/*Entête de site - Partie Header*/
+
 header {
     display: flex;
     flex-direction: column;
