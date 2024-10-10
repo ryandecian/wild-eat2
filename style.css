@@ -152,6 +152,71 @@ a:hover {
 }
 
 
+.restaurant-card {
+    display: flex;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .photo-plat {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  
+  .photo-plat img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .restaurant-info {
+    flex-grow: 1;
+  }
+  
+  .restaurant-name {
+    padding: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .restaurant-details {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  .restaurant-details li {
+    margin-bottom: 5px;
+    
+    
+  }
+  
+  .icon-image {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    
+
+  }
+  
+  .restaurant-contact {
+    text-align: right;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .restaurant-contact p {
+    margin: 5px 0;
+  }
+
 footer {
     background-color: #18534F ;
     color: #ffffff;
