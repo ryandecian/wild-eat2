@@ -180,21 +180,21 @@ main {
     @media (min-width: 768px) and (max-width: 992px) {
     .restaurant-card {
     grid-template-columns: 30% 50% 20%;
-    grid-template-rows: 5em 1fr; 
+    grid-template-rows: 2.5em 1fr; 
     }
  }
 
     @media (min-width: 992px) and (max-width: 1200px) {
     .restaurant-card {
     grid-template-columns: 30% 55% 15%;
-    grid-template-rows: 5em 1fr; 
+    grid-template-rows: 2.5em 1fr; 
     }
  }
 
     @media (min-width: 1200px) {
     .restaurant-card {
     grid-template-columns: 20% 67% 13%;
-    grid-template-rows: 5em 1fr; 
+    grid-template-rows: 2.5em 1fr; 
     }
  }
 
@@ -207,8 +207,14 @@ main {
     justify-content: center;
 
     @media (min-width: 768px) {
-    grid-column: span 3;
-    grid-column: 1/4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 0;
+    margin: 0em 0em 0em 1rem;
+    padding: 0;
+    grid-column: span 2;
+    grid-column: 2/4;
     grid-row: 1/2;
     }
   }
@@ -224,8 +230,11 @@ main {
     margin: 1em 0.5em 1em 1em;
 
     @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-column: 2/3;
         grid-row: 2/3;
+        max-height: 80%;
     }
   }
 
@@ -238,6 +247,11 @@ main {
     border-radius: 0.63em;
     overflow: hidden;
     margin: 1em 1em 1em 0.5em;
+
+    @media (min-width: 768px) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
   }
 
 
@@ -274,6 +288,8 @@ main {
     border-radius: 1rem;
     padding: 0.63rem;
     margin: 0.7em;
+    grid-column: 3/4;
+    grid-row: 2/3;
     }
   }
 
@@ -287,6 +303,8 @@ main {
     border-radius: 1rem;
     padding: 0.63rem;
     margin: 0.85em;
+    grid-column: 3/4;
+    grid-row: 2/3;
     }
   }
 
@@ -300,6 +318,8 @@ main {
     border-radius: 1rem;
     padding: 0.63rem;
     margin: 1em;
+    grid-column: 3/4;
+    grid-row: 2/3;
     }
   }
   
