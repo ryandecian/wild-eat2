@@ -53,14 +53,28 @@
 
  <main>
 
+<!--Barre de filtres-->
+
+<div class="filter-bar">
+  <input type="text" id="search-input" placeholder="Rechercher un plat ou un restaurant">
+  <select id="filter-select">
+    <option value="">Tout</option>
+    <option value="plat">Plat</option>
+    <option value="restaurant">Restaurant</option>
+  </select>
+  <button id="search-button">Rechercher</button>
+</div>
+
  <!--Restaurant 1-->
 
- <section class="restaurant-card">
+ <section class="restaurant-card" data-keywords="Les Délices du gout perdu 2 Bourger en Folie Soshi de la chance Grand-père au sirop d'érables Eau pluitée de la Seine">
+    
         
      <h2 class="restaurant-name">Les Délices du gout perdu 2</h2>
-        
+    
      <ul class="restaurant-details">
-      
+            
+    
          <li>
              <img src="./data-img/Bourger en Folie-icon.jpg" alt="Bourger en Folie" class="icon-image">
              <h3 class="liste-plat">Bourger en Folie</h3> 
@@ -97,7 +111,7 @@
 
  <!--Restaurant 2-->
 
- <section class="restaurant-card">
+ <section class="restaurant-card" data-keywords="La Pasta La Vista, Chéri Au Bled de l'optimisme Pizza de l'amour égaré Eau pluitée de la seine Diramilou">
         
      <h2 class="restaurant-name">La Pasta La Vista, Chéri</h2>
         
@@ -133,12 +147,13 @@
      <div class="restaurant-contact">
          <p><a href="#">Adresse</a></p>
          <p><a href="tel:+33600000002" class="tel">N° tel</a></p>
-        <p><a href="mailto:la-pasta-la-vista-cheri@wild-eat2.com" class="mail">Mail</a></p>
+         <p><a href="mailto:la-pasta-la-vista-cheri@wild-eat2.com" class="mail">Mail</a></p>
      </div>
  </section>
+
  <!--Restaurant 3-->
 
- <section class="restaurant-card">
+ <section class="restaurant-card" data-keywords="La Cuillière enchantée Au Bled de l'optimisme Bourger en Folie Cola Gazeuse Schneckekueche gateau dit chinois">
         
      <h2 class="restaurant-name">La Cuillière enchantée</h2>
         
@@ -179,7 +194,7 @@
  </section>
  <!--Restaurant 4-->
 
- <section class="restaurant-card">
+ <section class="restaurant-card" data-keywords="La Maison du Bonheur éphémère Pizza de l'amour égaré Salade de la joie perdue Eau pluitée de la seine Schneckekueche gateau dit chinois">
         
      <h2 class="restaurant-name">La Maison du Bonheur éphémère</h2>
         
@@ -221,7 +236,7 @@
 
  <!--Restaurant 5-->
 
- <section class="restaurant-card">
+ <section class="restaurant-card" data-keywords="Voyages autour de mon assiette Soshi de la chance Pizza de l'amour égaré Les larmes de la tulipe Grands-pères dans le sirop d'érables">
         
      <h2 class="restaurant-name">Voyages autour de mon assiette</h2>
         
@@ -284,6 +299,30 @@
 
 
  <script src="script.js"></script>
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const filterSelect = document.getElementById('filter-select');
+  const searchButton = document.getElementById('search-button');
+  const restaurantCards = document.querySelectorAll('.restaurant-card');
+
+  function filterRestaurants() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filterValue = filterSelect.value;
+
+    restaurantCards.forEach(card => {
+      const keywords = card.dataset.keywords.toLowerCase();
+      const isVisible = keywords.includes(searchTerm) && 
+                        (filterValue === '' || keywords.includes(filterValue));
+      card.style.display = isVisible ? 'flex' : 'none';
+    });
+  }
+
+  searchButton.addEventListener('click', filterRestaurants);
+  searchInput.addEventListener('input', filterRestaurants);
+  filterSelect.addEventListener('change', filterRestaurants);
+});
+</script>
 </body>
 
 </html>

@@ -21,8 +21,6 @@ function closeMenu() {
 
 }
 
-menu_burger.addEventListener('click', openMenu);
-close_burger.addEventListener('click',closeMenu);
-
-
+menuBurger.addEventListener('click', openMenu);
+closeBurger.addEventListener('click',closeMenu);
 
