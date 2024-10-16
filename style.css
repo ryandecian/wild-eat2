@@ -205,6 +205,7 @@ main {
     margin: 0.5em;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /* Styles pour la barre de filtres */
@@ -216,6 +217,10 @@ main {
     padding: 15px;
     background-color: var(--color-melon);
     border-radius: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 1590px;
+    max-height: 284px;
 }
 
 .filter-bar input,
