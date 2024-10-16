@@ -158,13 +158,58 @@ a:hover {
 /*Partie Main*/
 
 main {
+    padding: 1em;
+    margin: 0.5em;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-direction: center;
 }
 
+/* Styles pour la barre de filtres */
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--color-melon);
+    border-radius: 10px;
+}
 
+.filter-bar input,
+.filter-bar select,
+.filter-bar button {
+    padding: 10px;
+    border: 1px solid var(--color-fir);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filter-bar button {
+    background-color: var(--color-button-fond);
+    color: var(--color-button-text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-bar button:hover {
+    background-color: var(--color-fir);
+}
+
+@media (min-width: 768px) {
+    .filter-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .filter-bar input {
+        flex-grow: 1;
+    }
+
+    .filter-bar select,
+    .filter-bar button {
+        width: auto;
+    }
+}
 
 .restaurant-card {
     display: grid;
@@ -312,3 +357,49 @@ footer>article>p {
         display: none;
     }
 }
+
+
+/* Barre de filtres */
+/* Styles pour la barre de filtres */
+
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--color-melon);
+    border-radius: 10px;
+}
+
+.filter-bar input,
+.filter-bar button {
+    padding: 10px;
+    border: 1px solid var(--color-fir);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filter-bar input {
+    flex-grow: 1;
+}
+
+.filter-bar button {
+    background-color: var(--color-button-fond);
+    color: var(--color-button-text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-bar button:hover {
+    background-color: var(--color-fir);
+}
+
+@media (min-width: 768px) {
+    .filter-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Le reste du code CSS pour main reste inchangé */
