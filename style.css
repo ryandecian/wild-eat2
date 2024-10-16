@@ -260,6 +260,8 @@ main {
     }
 }
 
+
+
 .restaurant-card {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -407,7 +409,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: right;
     border: 1px solid #000;
     border-radius: 1rem;
     padding: 0.63rem;
@@ -417,6 +418,12 @@ main {
     }
   }
   
+
+
+  .restaurant-contact>p {
+    margin: 0.3rem;
+  }
+
 
 
   .restaurant-details li {
