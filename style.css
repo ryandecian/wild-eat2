@@ -176,6 +176,7 @@ img {
 a:hover {
     background-color: var(--color-button-fond);
     color: var(--color-button-text);
+    padding: 0.4rem;
     border-radius: 1rem;
 }
 
