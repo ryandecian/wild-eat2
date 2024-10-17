@@ -131,6 +131,40 @@ function openMenu() {
       menu_burger.style.display= "block";
     }
 
+//----------------------------------------------------------------------------
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const restaurantCards = document.querySelectorAll('.restaurant-card');
+  const mainElement = document.querySelector('main');
 
+  // Créer le message "Aucun résultat" une seule fois
+  const noResultsMessage = document.createElement('p');
+  noResultsMessage.id = 'no-results-message';
+  noResultsMessage.textContent = 'Aucun résultat';
+  noResultsMessage.style.display = 'none';
+  mainElement.appendChild(noResultsMessage);
+
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase().trim();
+    let hasResults = false;
+
+    restaurantCards.forEach(card => {
+      const keywords = card.dataset.keywords.toLowerCase();
+      if (keywords.includes(searchTerm)) {
+        card.style.display = 'grid'; // Ou 'block', selon votre mise en page
+        hasResults = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Afficher ou masquer le message "Aucun résultat"
+    if (!hasResults && searchTerm !== '') {
+      noResultsMessage.style.display = 'block';
+    } else {
+      noResultsMessage.style.display = 'none';
+    }
+  });
+});
