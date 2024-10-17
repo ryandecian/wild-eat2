@@ -176,6 +176,7 @@ img {
 a:hover {
     background-color: var(--color-button-fond);
     color: var(--color-button-text);
+    padding: 0.4rem;
     border-radius: 1rem;
 }
 
@@ -258,6 +259,8 @@ main {
         width: auto;
     }
 }
+
+
 
 .restaurant-card {
     display: grid;
@@ -406,7 +409,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: right;
     border: 1px solid #000;
     border-radius: 1rem;
     padding: 0.63rem;
@@ -416,6 +418,12 @@ main {
     }
   }
   
+
+
+  .restaurant-contact>p {
+    margin: 0.3rem;
+  }
+
 
 
   .restaurant-details li {
