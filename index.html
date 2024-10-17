@@ -31,8 +31,18 @@
                       <li><a href="#">Actualités</a></li>
              </ul>
              <img class="close_burger" src="data-img/close.svg" class="close_burger" onclick="closeMenu()">
-         </nav>
-         <img class="menu_burger" src="data-img/menu_burger.svg" class="menu_burger" onclick="openMenu()">
+            </nav>
+            <img class="menu_burger" src="data-img/menu_burger.svg" class="menu_burger" onclick="openMenu()">
+         <nav class="navigation_desktop">
+            <ul>
+                     <li><a href="#">Contact</a></li>
+                     <li><a href="./test.html">Collections</a></li>
+                     <li><a href="#">Actualités</a></li>
+            </ul>
+           
+        </nav>
+        <img src="https://img.icons8.com/?size=48&id=fV1f7V6m4dLH&format=png" alt="drapeau Français" class="french_flag"></img>
+        <img src="https://img.icons8.com/?size=48&id=xapj7ZzAUZKI&format=png" alt="drapeau Anglais" class="english_flag"></img>
          
          
  </header>
@@ -43,17 +53,34 @@
 
  <main>
 
+<!-- Le carrousel d'images-->
+
+<div id="carousel">
+  <div class="images">
+    <img src="./data-img/Au Bled de l'optimisme-icon.jpg" alt="Au Bled de l'optimisme">
+    <img src="./data-img/Bourger en Folie-icon.jpg" alt="Bourger en Folie">
+    <img src="./data-img/Cola Gazeuse-icon.jpg" alt="Cola Gazeuse">
+    <img src="./data-img/Diramilou-icon.jpg" alt="Diramilou">
+    <img src="./data-img/Eau pluitée de la Seine-icon.jpg" alt="Eau pluitée de la Seine">
+    <img src="./data-img/grands-peres-dans-le-sirop d'érables-icon.jpg" alt="Grands-pères dans le sirop d'érables">
+    <img src="./data-img/Les larmes de la tulipe-icon.jpg" alt="Les larmes de la tulipe">
+    <img src="./data-img/Pizza de l'amour égaré-icon.jpg" alt="Pizza de l'amour égaré">
+    <img src="./data-img/Salade de la joie perdue-icon.jpg" alt="Salade de la joie perdue">
+    <img src="./data-img/Soshi de la chance-icon.jpg" alt="Soshi de la chance">
+
+  </div>
+</div>
+
+
 <!--Barre de filtres-->
 
 <div class="filter-bar">
   <input type="text" id="search-input" placeholder="Rechercher un plat ou un restaurant">
-  <select id="filter-select">
-    <option value="">Tout</option>
-    <option value="plat">Plat</option>
-    <option value="restaurant">Restaurant</option>
-  </select>
   <button id="search-button">Rechercher</button>
 </div>
+
+<div id="search-results"></div>
+
 
  <!--Restaurant 1-->
 
@@ -284,9 +311,7 @@
 
  </footer>
 
-
  <script src="script.js"></script>
-
 </body>
 
 </html>
