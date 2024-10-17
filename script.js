@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "Plat" : "Dish",
         "Rechercher" : "Search",
         "Confidentialité" : "Privacy",
+        "Salade de la joie perdue" : "Salad of lost joy",
+        "Les larmes de la tulipe" : "The tears of the tulip",
+        "Grands-pères dans le sirop d'érables" : "Grandfathers in maple syrup",
     }
 
     const dictionaryEnToFr = {
@@ -45,6 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "Dish" : "Plat",
         "Search" : "Rechercher",
         "Privacy" : "Confidentialité",
+        "Salad of lost joy" : "Salade de la joie perdue",
+        "The tears of the tulip" : "Les larmes de la tulipe",
+        "Grandfathers in maple syrup" : "Grands-pères dans le sirop d'érables",
     }
 
 
