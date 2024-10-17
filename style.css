@@ -481,9 +481,8 @@ footer>article>p {
     height: 50px;
     top: 1em;
     right: 1em;
-    z-index: 1000;
 
-    @media (min-width: 1081px) {
+    @media (min-width: 768px) {
         display: none;
     }
 }
@@ -494,9 +493,8 @@ footer>article>p {
     height: 50px;
     top: 1em;
     right: 1em;
-    z-index: 1000;
 
-    @media (min-width: 1081px) {
+    @media (min-width: 768px) {
         display: none;
     }
 }

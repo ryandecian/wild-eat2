@@ -127,8 +127,10 @@ function openMenu() {
 
     function closeMenu() {
       navigation.classList.remove('open');
+
+      menu_burger.style.display= "block";
     }
 
-    menuBurger.addEventListener('click', openMenu);
-    closeBurger.addEventListener('click', closeMenu);
+
+
 
