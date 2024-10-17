@@ -77,9 +77,6 @@ header {
 
     @media (min-width: 768px) {
     max-width: 30%;
-    text-align: left;
-    font-size: auto;
-    align-items: flex-start;
     }
 }
 
@@ -148,6 +145,9 @@ img {
 }
 
 .navigation_desktop {
+    position: absolute;
+    top: 0;
+    right: 0;
     @media (max-width: 768px) {
         display: none;
     }
