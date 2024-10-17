@@ -20,14 +20,14 @@
  <header>
          <div class="logo">
              <img src="./data-img/Logo-Wild-Eat-2.png" alt="logo du site" class="img-logo">
-             <p>Explorez des plats uniques et authentiques 
-             allant des classiques revisités aux créations contemporaines.</p>
+             <p class="slogan">Explorez des plats uniques et authentiques 
+             allant des classiques revisités aux créations contemporaines</p>
          </div>
 
          <nav class="navigation">
              <ul>
                       <li><a href="#">Contact</a></li>
-                      <li><a href="./test.html">Collections</a></li>
+                      <li><a href="#">Collections</a></li>
                       <li><a href="#">Actualités</a></li>
              </ul>
              <img class="close_burger" src="data-img/close.svg" class="close_burger" onclick="closeMenu()">
@@ -37,7 +37,7 @@
             <ul>
                      <li><a href="#">Contact</a></li>
                      <li><a href="./test.html">Collections</a></li>
-                     <li><a href="#">Actualités</a></li>
+                     <li><a href="#" class="actual">Actualités</a></li>
             </ul>
            
         </nav>
@@ -76,7 +76,12 @@
 
 <div class="filter-bar">
   <input type="text" id="search-input" placeholder="Rechercher un plat ou un restaurant">
-  <button id="search-button">Rechercher</button>
+  <select id="filter-select">
+    <option value="" class="filter-option">Tout</option>
+    <option value="plat" class="filter-option">Plat</option>
+    <option value="restaurant" class="filter-option">Restaurant</option>
+  </select>
+  <button id="search-button" class="filter-option">Rechercher</button>
 </div>
 
 <div id="search-results"></div>
@@ -87,7 +92,7 @@
  <section class="restaurant-card" data-keywords="Les Délices du gout perdu 2 Bourger en Folie Soshi de la chance Grand-père au sirop d'érables Eau pluitée de la Seine">
     
         
-     <h2 class="restaurant-name">Les Délices du gout perdu 2</h2>
+     <h2 class="restaurant-name">Les Délices du gout perdu</h2>
     
      <ul class="restaurant-details">
             
@@ -120,7 +125,7 @@
      </div>
 
      <div class="restaurant-contact">
-         <p><a href="#">Adresse</a></p>
+         <p><a href="#" class="adresse">Adresse</a></p>
          <p><a href="tel:+33600000001" class="tel">N° tel</a></p>
          <p><a href="mailto:les-delice-du-gout-perdu@wild-eat2.com" class="mail">Mail</a></p>
      </div>
@@ -162,7 +167,7 @@
      </div>
 
      <div class="restaurant-contact">
-         <p><a href="#">Adresse</a></p>
+         <p><a href="#" class="adresse">Adresse</a></p>
          <p><a href="tel:+33600000002" class="tel">N° tel</a></p>
          <p><a href="mailto:la-pasta-la-vista-cheri@wild-eat2.com" class="mail">Mail</a></p>
      </div>
@@ -204,7 +209,7 @@
      </div>
 
      <div class="restaurant-contact">
-         <p><a href="#">Adresse</a></p>
+         <p><a href="#" class="adresse">Adresse</a></p>
          <p><a href="tel:+33600000003" class="tel">N° tel</a></p>
          <p><a href="mailto:la-cuilliere-enchantee@wild-eat2.com" class="mail">Mail</a></p>
      </div>
@@ -245,7 +250,7 @@
      </div>
 
      <div class="restaurant-contact">
-         <p><a href="#">Adresse</a></p>
+         <p><a href="#" class="adresse">Adresse</a></p>
          <p><a href="tel:+33600000004" class="tel">N° tel</a></p>
          <p><a href="mailto:la-maison-du-bonheur-ephemere@wild-eat2.com" class="mail">Mail</a></p>
      </div>
@@ -287,7 +292,7 @@
      </div>
 
      <div class="restaurant-contact">
-         <p><a href="#">Adresse</a></p>
+         <p><a href="#" class="adresse">Adresse</a></p>
          <p><a href="tel:+33600000005" class="tel">N° tel</a></p>
          <p><a href="mailto:voyage-autour-de-mon-assiette@wild-eat2.com" class="mail">Mail</a></p>
      </div>
@@ -304,8 +309,8 @@
     <article>
 
         <p>&copy; Wild Eat 2  2024</p>
-        <p>Termes et conditions</p>
-        <p> Confidentialité</p>
+        <p class="footer-translate">Termes et conditions</p>
+        <p class="footer-translate">Confidentialité</p>
         
    </article>
 
