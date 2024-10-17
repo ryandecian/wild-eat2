@@ -546,3 +546,50 @@ footer>article>p {
 }
 
 /* Le reste du code CSS pour main reste inchangé */
+/* Le carrousel d'images*/
+.images {
+     display: flex;
+     width: 100%;
+     height: 58vh;
+     justify-content: center;
+     align-items: center;
+     animation-duration: 20s;
+     animation-name: Images-restaurant;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     
+    }
+    #carousel {
+     width: 100%;
+     overflow: hidden;
+     
+    }
+    @keyframes Images-restaurant {
+     0% {
+      transform: translateX(0);
+     }
+     25% {
+      transform: translateX(-640px);
+     }
+     50% {
+      transform: translateX(-1280px);
+     }
+     75% {
+      transform: translateX(-1920px);
+     }
+     100% {
+      transform: translateX(0);
+     }
+    }
+    #search-results {
+     display: none;
+     margin-top: 20px;
+    }
+    #search-results .restaurant-card {
+     margin-bottom: 20px;
+    }
+    #search-results p {
+     text-align: center;
+     font-style: italic;
+     color: #666;
+    }

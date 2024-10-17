@@ -125,15 +125,10 @@ function openMenu() {
     
 }
 
-function closeMenu() {
+    function closeMenu() {
+      navigation.classList.remove('open');
+    }
 
-    navigation.classList.remove('open')
-
-        menu_burger.style.display= "block";
-        close_burger.style.display= "none";
-
-}
-
-menuBurger.addEventListener('click', openMenu);
-closeBurger.addEventListener('click',closeMenu);
+    menuBurger.addEventListener('click', openMenu);
+    closeBurger.addEventListener('click', closeMenu);
 
