@@ -242,7 +242,7 @@ main {
   border: solid 2px #000;
   margin: 0.63em;
   max-width: 1590px;
-  max-height: 284px;
+  max-height: 350px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .restaurant-card {
