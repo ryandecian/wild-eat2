@@ -1,323 +1,469 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Ryan DECIAN, Joey MARTIN, Marc JUVENAL">
-    <meta name="description" content="Explorez des plats uniques et authentiques 
-    allant des classiques revisités aux créations contemporaines.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=devise-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ryan DECIAN, Joey MARTIN, Marc JUVENAL" />
+    <meta
+      name="description"
+      content="Explorez des plats uniques et authentiques 
+    allant des classiques revisités aux créations contemporaines."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=devise-width, initial-scale=1" />
     <title>Wild Eat 2</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./data-img/Logo-Wild-Eat-2.ico" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./data-img/Logo-Wild-Eat-2.ico"
+      type="image/x-icon"
+    />
+  </head>
 
+  <body>
+    <!--En tête-->
 
-<body>
+    <header>
+      <div class="logo">
+        <img
+          src="data-img/logo_wild_eat.svg"
+          alt="logo du site"
+          class="img-logo"
+        />
+        <p class="slogan">
+          Explorez des plats uniques et authentiques allant des classiques
+          revisités aux créations contemporaines
+        </p>
+      </div>
 
- <!--En tête-->
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Actualités</a></li>
+        </ul>
+        <img
+          class="close_burger"
+          src="data-img/close.svg"
+          class="close_burger"
+          onclick="closeMenu()"
+        />
+      </nav>
+      <img
+        class="menu_burger"
+        src="data-img/menu_burger.svg"
+        class="menu_burger"
+        onclick="openMenu()"
+      />
+      <nav class="navigation_desktop">
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="./test.html">Qui sommes nous ?</a></li>
+          <li><a href="#" class="actual">Actualités</a></li>
+        </ul>
+      </nav>
+      <img
+        src="https://img.icons8.com/?size=48&id=fV1f7V6m4dLH&format=png"
+        alt="drapeau Français"
+        class="french_flag"
+      />
+      <img
+        src="https://img.icons8.com/?size=48&id=xapj7ZzAUZKI&format=png"
+        alt="drapeau Anglais"
+        class="english_flag"
+      />
 
- <header>
-         <div class="logo">
-             <img src="data-img/logo_wild_eat.svg" alt="logo du site" class="img-logo">
-             <p class="slogan">Explorez des plats uniques et authentiques 
-             allant des classiques revisités aux créations contemporaines</p>
-         </div>
+      <div id="carousel">
+        <div class="images">
+          <img
+            src="./data-img/Au_Bled_de_l'optimisme-icon.jpg"
+            alt="Au Bled de l'optimisme"
+          />
+          <img
+            src="./data-img/Bourger_en_Folie-icon.jpg"
+            alt="Bourger en Folie"
+          />
+          <img src="./data-img/Cola_Gazeuse-icon.jpg" alt="Cola Gazeuse" />
+          <img src="./data-img/Diramilou-icon.jpg" alt="Diramilou" />
+          <img
+            src="./data-img/Eau_pluitée_de_la_seine-icon.jpg"
+            alt="Eau pluitée de la Seine"
+          />
+          <img
+            src="./data-img/grands-peres-dans-le-sirop-d'érables-icon.jpg"
+            alt="Grands-pères dans le sirop d'érables"
+          />
+          <img
+            src="./data-img/Les_larmes_de_la_tulipe-icon.jpg"
+            alt="Les larmes de la tulipe"
+          />
+          <img
+            src="./data-img/Pizza-de-l'amour-égaré-icon.jpg"
+            alt="Pizza de l'amour égaré"
+          />
+          <img
+            src="./data-img/Salade-de-la-joie-perdue-icon.jpg"
+            alt="Salade de la joie perdue"
+          />
+          <img
+            src="./data-img/Soshi_de_la_chance-icon.jpg"
+            alt="Soshi de la chance"
+          />
+        </div>
+      </div>
+    </header>
 
-         <nav class="navigation">
-             <ul>
-                      <li><a href="#">Contact</a></li>
-                      <li><a href="#">Collections</a></li>
-                      <li><a href="#">Actualités</a></li>
-             </ul>
-             <img class="close_burger" src="data-img/close.svg" class="close_burger" onclick="closeMenu()">
-            </nav>
-            <img class="menu_burger" src="data-img/menu_burger.svg" class="menu_burger" onclick="openMenu()">
-         <nav class="navigation_desktop">
-            <ul>
-                     <li><a href="#">Contact</a></li>
-                     <li><a href="./test.html">Collections</a></li>
-                     <li><a href="#" class="actual">Actualités</a></li>
-            </ul>
-           
-        </nav>
-        <img src="https://img.icons8.com/?size=48&id=fV1f7V6m4dLH&format=png" alt="drapeau Français" class="french_flag"></img>
-        <img src="https://img.icons8.com/?size=48&id=xapj7ZzAUZKI&format=png" alt="drapeau Anglais" class="english_flag"></img>
-         
-         
- </header>
+    <!--Contenu principal-->
 
+    <main>
+      <!--Barre de filtres-->
 
+      <div class="filter-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Rechercher un plat ou un restaurant"
+        />
+        <select id="filter-select">
+          <option value="" class="filter-option">Tout</option>
+          <option value="plat" class="filter-option">Plat</option>
+          <option value="restaurant" class="filter-option">Restaurant</option>
+        </select>
+        <button id="search-button" class="filter-option">Rechercher</button>
+      </div>
 
- <!--Contenu principal-->
+      <div id="search-results"></div>
 
- <main>
+      <!--Restaurant 1-->
 
-<!-- Le carrousel d'images-->
+      <section
+        class="restaurant-card"
+        data-keywords="Les Délices du gout perdu 2 Bourger en Folie Soshi de la chance Grand-père au sirop d'érables Eau pluitée de la Seine"
+      >
+        <h2 class="restaurant-name">Les Délices du gout perdu</h2>
 
-<div id="carousel">
-  <div class="images">
-    <img src="./data-img/Au_Bled_de_l'optimisme-icon.jpg" alt="Au Bled de l'optimisme">
-    <img src="./data-img/Bourger_en_Folie-icon.jpg" alt="Bourger en Folie">
-    <img src="./data-img/Cola_Gazeuse-icon.jpg" alt="Cola Gazeuse">
-    <img src="./data-img/Diramilou-icon.jpg" alt="Diramilou">
-    <img src="./data-img/Eau_pluitée_de_la_seine-icon.jpg" alt="Eau pluitée de la Seine">
-    <img src="./data-img/grands-peres-dans-le-sirop-d'érables-icon.jpg" alt="Grands-pères dans le sirop d'érables">
-    <img src="./data-img/Les_larmes_de_la_tulipe-icon.jpg" alt="Les larmes de la tulipe">
-    <img src="./data-img/Pizza-de-l'amour-égaré-icon.jpg" alt="Pizza de l'amour égaré">
-    <img src="./data-img/Salade-de-la-joie-perdue-icon.jpg" alt="Salade de la joie perdue">
-    <img src="./data-img/Soshi_de_la_chance-icon.jpg" alt="Soshi de la chance">
+        <ul class="restaurant-details">
+          <li>
+            <img
+              src="./data-img/Bourger_en_Folie-icon.jpg"
+              alt="Bourger en Folie"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Bourger en Folie</h3>
+          </li>
 
-  </div>
-</div>
+          <li>
+            <img
+              src="./data-img/Soshi_de_la_chance-icon.jpg"
+              alt="Soshi de la chance"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Soshi de la chance</h3>
+          </li>
 
+          <li>
+            <img
+              src="./data-img/grands-peres-dans-le-sirop-d'érables-icon.jpg"
+              alt="Grand-père au sirop d'érables"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Grand-père au sirop d'érables</h3>
+          </li>
 
-<!--Barre de filtres-->
+          <li>
+            <img
+              src="./data-img/Eau_pluitée_de_la_seine-icon.jpg"
+              alt="Eau pluitée de la Seine"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Eau pluitée de la Seine</h3>
+          </li>
+        </ul>
 
-<div class="filter-bar">
-  <input type="text" id="search-input" placeholder="Rechercher un plat ou un restaurant">
-  <select id="filter-select">
-    <option value="" class="filter-option">Tout</option>
-    <option value="plat" class="filter-option">Plat</option>
-    <option value="restaurant" class="filter-option">Restaurant</option>
-  </select>
-  <button id="search-button" class="filter-option">Rechercher</button>
-</div>
+        <div class="photo-plat">
+          <img
+            src="./data-img/Pizza-de-l'amour-égaré-icon.jpg"
+            alt="pizza de l'amour égaré"
+          />
+        </div>
 
-<div id="search-results"></div>
+        <div class="restaurant-contact">
+          <p><a href="#" class="adresse">Adresse</a></p>
+          <p><a href="tel:+33600000001" class="tel">N° tel</a></p>
+          <p>
+            <a href="mailto:les-delice-du-gout-perdu@wild-eat2.com" class="mail"
+              >Mail</a
+            >
+          </p>
+        </div>
+      </section>
 
+      <!--Restaurant 2-->
 
- <!--Restaurant 1-->
+      <section
+        class="restaurant-card"
+        data-keywords="La Pasta La Vista, Chéri Au Bled de l'optimisme Pizza de l'amour égaré Eau pluitée de la seine Diramilou"
+      >
+        <h2 class="restaurant-name">La Pasta La Vista, Chéri</h2>
 
- <section class="restaurant-card" data-keywords="Les Délices du gout perdu 2 Bourger en Folie Soshi de la chance Grand-père au sirop d'érables Eau pluitée de la Seine">
-    
-        
-     <h2 class="restaurant-name">Les Délices du gout perdu</h2>
-    
-     <ul class="restaurant-details">
-            
-    
-         <li>
-             <img src="./data-img/Bourger_en_Folie-icon.jpg" alt="Bourger en Folie" class="icon-image">
-             <h3 class="liste-plat">Bourger en Folie</h3> 
-         </li>
-         
-         <li>
-             <img src="./data-img/Soshi_de_la_chance-icon.jpg" alt="Soshi de la chance" class="icon-image">
-             <h3 class="liste-plat">Soshi de la chance</h3>
-         </li>
-         
-         <li>
-             <img src="./data-img/grands-peres-dans-le-sirop-d'érables-icon.jpg" alt="Grand-père au sirop d'érables" class="icon-image">
-             <h3 class="liste-plat">Grand-père au sirop d'érables</h3>
-         </li>
-          
-         <li>
-             <img src="./data-img/Eau_pluitée_de_la_seine-icon.jpg" alt="Eau pluitée de la Seine" class="icon-image">
-             <h3 class="liste-plat">Eau pluitée de la Seine</h3>
-         </li>
-         
-     </ul>
-    
+        <ul class="restaurant-details">
+          <li>
+            <img
+              src="./data-img/Au_Bled_de_l'optimisme-icon.jpg"
+              alt="Au Bled de l'optimisme"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Au Bled de l'optimisme</h3>
+          </li>
 
-     <div class="photo-plat">
-         <img src="./data-img/Pizza-de-l'amour-égaré-icon.jpg" alt="pizza de l'amour égaré" >
-     </div>
+          <li>
+            <img
+              src="./data-img/Pizza-de-l'amour-égaré-icon.jpg"
+              alt="Pizza de l'amour égaré"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Pizza de l'amour égaré</h3>
+          </li>
 
-     <div class="restaurant-contact">
-         <p><a href="#" class="adresse">Adresse</a></p>
-         <p><a href="tel:+33600000001" class="tel">N° tel</a></p>
-         <p><a href="mailto:les-delice-du-gout-perdu@wild-eat2.com" class="mail">Mail</a></p>
-     </div>
- </section>
+          <li>
+            <img
+              src="./data-img/Eau_pluitée_de_la_seine-icon.jpg"
+              alt="Eau pluitée de la Seine"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Eau pluitée de la Seine</h3>
+          </li>
 
- <!--Restaurant 2-->
+          <li>
+            <img
+              src="./data-img/Diramilou-icon.jpg"
+              alt="Diramilou"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Diramilou</h3>
+          </li>
+        </ul>
 
- <section class="restaurant-card" data-keywords="La Pasta La Vista, Chéri Au Bled de l'optimisme Pizza de l'amour égaré Eau pluitée de la seine Diramilou">
-        
-     <h2 class="restaurant-name">La Pasta La Vista, Chéri</h2>
-        
-     <ul class="restaurant-details">
-      
-         <li>
-             <img src="./data-img/Au_Bled_de_l'optimisme-icon.jpg" alt="Au Bled de l'optimisme" class="icon-image">
-             <h3 class="liste-plat">Au Bled de l'optimisme</h3> 
-         </li>
-         
-         <li>
-             <img src="./data-img/Pizza-de-l'amour-égaré-icon.jpg" alt="Pizza de l'amour égaré" class="icon-image">
-             <h3 class="liste-plat">Pizza de l'amour égaré</h3>
-         </li>
-         
-         <li>
-             <img src="./data-img/Eau_pluitée_de_la_seine-icon.jpg" alt="Eau pluitée de la Seine" class="icon-image">
-             <h3 class="liste-plat">Eau pluitée de la Seine</h3>
-         </li>
-          
-         <li>
-             <img src="./data-img/Diramilou-icon.jpg" alt="Diramilou" class="icon-image">
-             <h3 class="liste-plat">Diramilou</h3>
-         </li>
-         
-     </ul>
-    
+        <div class="photo-plat">
+          <img
+            src="./data-img/Salade-de-la-joie-perdue-icon.jpg"
+            alt="Salade de la joie perdue"
+          />
+        </div>
 
-     <div class="photo-plat">
-         <img src="./data-img/Salade-de-la-joie-perdue-icon.jpg" alt="Salade de la joie perdue" >
-     </div>
+        <div class="restaurant-contact">
+          <p><a href="#" class="adresse">Adresse</a></p>
+          <p><a href="tel:+33600000002" class="tel">N° tel</a></p>
+          <p>
+            <a href="mailto:la-pasta-la-vista-cheri@wild-eat2.com" class="mail"
+              >Mail</a
+            >
+          </p>
+        </div>
+      </section>
 
-     <div class="restaurant-contact">
-         <p><a href="#" class="adresse">Adresse</a></p>
-         <p><a href="tel:+33600000002" class="tel">N° tel</a></p>
-         <p><a href="mailto:la-pasta-la-vista-cheri@wild-eat2.com" class="mail">Mail</a></p>
-     </div>
- </section>
+      <!--Restaurant 3-->
 
- <!--Restaurant 3-->
+      <section
+        class="restaurant-card"
+        data-keywords="La Cuillière enchantée Au Bled de l'optimisme Bourger en Folie Cola Gazeuse Schneckekueche gateau dit chinois"
+      >
+        <h2 class="restaurant-name">La Cuillière enchantée</h2>
 
- <section class="restaurant-card" data-keywords="La Cuillière enchantée Au Bled de l'optimisme Bourger en Folie Cola Gazeuse Schneckekueche gateau dit chinois">
-        
-     <h2 class="restaurant-name">La Cuillière enchantée</h2>
-        
-     <ul class="restaurant-details">
-      
-         <li>
-             <img src="./data-img/Au_Bled_de_l'optimisme-icon.jpg" alt="Au Bled de l'optimisme" class="icon-image">
-             <h3 class="liste-plat">Au Bled de l'optimisme</h3> 
-         </li>
-         
-         <li>
-             <img src="./data-img/Bourger_en_Folie-icon.jpg" alt="Bourger en Folie" class="icon-image">
-             <h3 class="liste-plat">Bourger en Folie</h3>
-         </li>
-         
-         <li>
-             <img src="./data-img/Cola_Gazeuse-icon.jpg" alt="Cola Gazeuse" class="icon-image">
-             <h3 class="liste-plat">Cola Gazeuse</h3>
-         </li>
-          
-         <li>
-             <img src="./data-img/schneckekueche-gateau-dit-chinois-icon.jpg" alt="Schneckekueche gateau dit chinois" class="icon-image">
-             <h3 class="liste-plat">Schneckekueche gateau dit chinois</h3>
-         </li>
-         
-     </ul>
-    
+        <ul class="restaurant-details">
+          <li>
+            <img
+              src="./data-img/Au_Bled_de_l'optimisme-icon.jpg"
+              alt="Au Bled de l'optimisme"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Au Bled de l'optimisme</h3>
+          </li>
 
-     <div class="photo-plat">
-         <img src="./data-img/Soshi_de_la_chance-icon.jpg" alt="Soshi de la chance" >
-     </div>
+          <li>
+            <img
+              src="./data-img/Bourger_en_Folie-icon.jpg"
+              alt="Bourger en Folie"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Bourger en Folie</h3>
+          </li>
 
-     <div class="restaurant-contact">
-         <p><a href="#" class="adresse">Adresse</a></p>
-         <p><a href="tel:+33600000003" class="tel">N° tel</a></p>
-         <p><a href="mailto:la-cuilliere-enchantee@wild-eat2.com" class="mail">Mail</a></p>
-     </div>
- </section>
- <!--Restaurant 4-->
+          <li>
+            <img
+              src="./data-img/Cola_Gazeuse-icon.jpg"
+              alt="Cola Gazeuse"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Cola Gazeuse</h3>
+          </li>
 
- <section class="restaurant-card" data-keywords="La Maison du Bonheur éphémère Pizza de l'amour égaré Salade de la joie perdue Eau pluitée de la seine Schneckekueche gateau dit chinois">
-        
-     <h2 class="restaurant-name">La Maison du Bonheur éphémère</h2>
-        
-     <ul class="restaurant-details">
-      
-         <li>
-             <img src="./data-img/Pizza-de-l'amour-égaré-icon.jpg" alt="Pizza de l'amour égaré" class="icon-image">
-             <h3 class="liste-plat">Pizza de l'amour égaré</h3> 
-         </li>
-         
-         <li>
-             <img src="./data-img/Salade-de-la-joie-perdue-icon.jpg" alt="Salade de la joie perdue" class="icon-image">
-             <h3 class="liste-plat">Salade de la joie perdue</h3>
-         </li>
-         
-         <li>
-             <img src="./data-img/Eau_pluitée_de_la_seine-icon.jpg" alt="Eau pluitée de la Seine" class="icon-image">
-             <h3 class="liste-plat">Eau pluitée de la Seine</h3>
-         </li>
-          
-         <li>
-             <img src="./data-img/schneckekueche-gateau-dit-chinois-icon.jpg" alt="Schneckekueche gateau dit chinois" class="icon-image">
-             <h3 class="liste-plat">Schneckekueche gateau dit chinois</h3>
-         </li>
-         
-     </ul>
-    
+          <li>
+            <img
+              src="./data-img/schneckekueche-gateau-dit-chinois-icon.jpg"
+              alt="Schneckekueche gateau dit chinois"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Schneckekueche gateau dit chinois</h3>
+          </li>
+        </ul>
 
-     <div class="photo-plat">
-         <img src="./data-img/Au_Bled_de_l'optimisme-icon.jpg" alt="Au Bled de l'optimisme" >
-     </div>
+        <div class="photo-plat">
+          <img
+            src="./data-img/Soshi_de_la_chance-icon.jpg"
+            alt="Soshi de la chance"
+          />
+        </div>
 
-     <div class="restaurant-contact">
-         <p><a href="#" class="adresse">Adresse</a></p>
-         <p><a href="tel:+33600000004" class="tel">N° tel</a></p>
-         <p><a href="mailto:la-maison-du-bonheur-ephemere@wild-eat2.com" class="mail">Mail</a></p>
-     </div>
- </section>
+        <div class="restaurant-contact">
+          <p><a href="#" class="adresse">Adresse</a></p>
+          <p><a href="tel:+33600000003" class="tel">N° tel</a></p>
+          <p>
+            <a href="mailto:la-cuilliere-enchantee@wild-eat2.com" class="mail"
+              >Mail</a
+            >
+          </p>
+        </div>
+      </section>
+      <!--Restaurant 4-->
 
- <!--Restaurant 5-->
+      <section
+        class="restaurant-card"
+        data-keywords="La Maison du Bonheur éphémère Pizza de l'amour égaré Salade de la joie perdue Eau pluitée de la seine Schneckekueche gateau dit chinois"
+      >
+        <h2 class="restaurant-name">La Maison du Bonheur éphémère</h2>
 
- <section class="restaurant-card" data-keywords="Voyages autour de mon assiette Soshi de la chance Pizza de l'amour égaré Les larmes de la tulipe Grands-pères dans le sirop d'érables">
-        
-     <h2 class="restaurant-name">Voyages autour de mon assiette</h2>
-        
-     <ul class="restaurant-details">
-      
-         <li>
-             <img src="./data-img/Soshi_de_la_chance-icon.jpg" alt="Soshi de la chance" class="icon-image">
-             <h3 class="liste-plat">Soshi de la chance</h3> 
-         </li>
-         
-         <li>
-             <img src="./data-img/Pizza-de-l'amour-égaré-icon.jpg" alt="Pizza de l'amour égaré" class="icon-image">
-             <h3 class="liste-plat">Pizza de l'amour égaré</h3>
-         </li>
-         
-         <li>
-             <img src="./data-img/Les_larmes_de_la_tulipe-icon.jpg" alt="Les larmes de la tulipe" class="icon-image">
-             <h3 class="liste-plat">Les larmes de la tulipe</h3>
-         </li>
-          
-         <li>
-             <img src="./data-img/grands-peres-dans-le-sirop-d'érables-icon.jpg" alt="Grands-pères dans le sirop d'érables" class="icon-image">
-             <h3 class="liste-plat">Grands-pères dans le sirop d'érables</h3>
-         </li>
-         
-     </ul>
-    
+        <ul class="restaurant-details">
+          <li>
+            <img
+              src="./data-img/Pizza-de-l'amour-égaré-icon.jpg"
+              alt="Pizza de l'amour égaré"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Pizza de l'amour égaré</h3>
+          </li>
 
-     <div class="photo-plat">
-         <img src="./data-img/Diramilous.jpg" alt="pizza de l'amour égaré" >
-     </div>
+          <li>
+            <img
+              src="./data-img/Salade-de-la-joie-perdue-icon.jpg"
+              alt="Salade de la joie perdue"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Salade de la joie perdue</h3>
+          </li>
 
-     <div class="restaurant-contact">
-         <p><a href="#" class="adresse">Adresse</a></p>
-         <p><a href="tel:+33600000005" class="tel">N° tel</a></p>
-         <p><a href="mailto:voyage-autour-de-mon-assiette@wild-eat2.com" class="mail">Mail</a></p>
-     </div>
- </section>
+          <li>
+            <img
+              src="./data-img/Eau_pluitée_de_la_seine-icon.jpg"
+              alt="Eau pluitée de la Seine"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Eau pluitée de la Seine</h3>
+          </li>
 
- </main>
+          <li>
+            <img
+              src="./data-img/schneckekueche-gateau-dit-chinois-icon.jpg"
+              alt="Schneckekueche gateau dit chinois"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Schneckekueche gateau dit chinois</h3>
+          </li>
+        </ul>
 
+        <div class="photo-plat">
+          <img
+            src="./data-img/Au_Bled_de_l'optimisme-icon.jpg"
+            alt="Au Bled de l'optimisme"
+          />
+        </div>
 
+        <div class="restaurant-contact">
+          <p><a href="#" class="adresse">Adresse</a></p>
+          <p><a href="tel:+33600000004" class="tel">N° tel</a></p>
+          <p>
+            <a
+              href="mailto:la-maison-du-bonheur-ephemere@wild-eat2.com"
+              class="mail"
+              >Mail</a
+            >
+          </p>
+        </div>
+      </section>
 
- <!--Bas de page-->
- 
- <footer>
+      <!--Restaurant 5-->
 
-    <article>
+      <section
+        class="restaurant-card"
+        data-keywords="Voyages autour de mon assiette Soshi de la chance Pizza de l'amour égaré Les larmes de la tulipe Grands-pères dans le sirop d'érables"
+      >
+        <h2 class="restaurant-name">Voyages autour de mon assiette</h2>
 
-        <p>&copy; Wild Eat 2  2024</p>
+        <ul class="restaurant-details">
+          <li>
+            <img
+              src="./data-img/Soshi_de_la_chance-icon.jpg"
+              alt="Soshi de la chance"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Soshi de la chance</h3>
+          </li>
+
+          <li>
+            <img
+              src="./data-img/Pizza-de-l'amour-égaré-icon.jpg"
+              alt="Pizza de l'amour égaré"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Pizza de l'amour égaré</h3>
+          </li>
+
+          <li>
+            <img
+              src="./data-img/Les_larmes_de_la_tulipe-icon.jpg"
+              alt="Les larmes de la tulipe"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Les larmes de la tulipe</h3>
+          </li>
+
+          <li>
+            <img
+              src="./data-img/grands-peres-dans-le-sirop-d'érables-icon.jpg"
+              alt="Grands-pères dans le sirop d'érables"
+              class="icon-image"
+            />
+            <h3 class="liste-plat">Grands-pères dans le sirop d'érables</h3>
+          </li>
+        </ul>
+
+        <div class="photo-plat">
+          <img src="./data-img/Diramilous.jpg" alt="pizza de l'amour égaré" />
+        </div>
+
+        <div class="restaurant-contact">
+          <p><a href="#" class="adresse">Adresse</a></p>
+          <p><a href="tel:+33600000005" class="tel">N° tel</a></p>
+          <p>
+            <a
+              href="mailto:voyage-autour-de-mon-assiette@wild-eat2.com"
+              class="mail"
+              >Mail</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!--Bas de page-->
+
+    <footer>
+      <article>
+        <p>&copy; Wild Eat 2 2024</p>
         <p class="footer-translate">Termes et conditions</p>
         <p class="footer-translate">Confidentialité</p>
-        
-   </article>
+      </article>
+    </footer>
 
- </footer>
-
- 
- <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
