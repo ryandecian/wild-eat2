@@ -542,10 +542,8 @@ footer > article > p {
 
 #carousel {
   position: relative;
-  height: 40vh;
-  width: 300vh;
+  height: 350px;
   top: 50px;
-  border-radius: 1em;
   @media (max-width: 768px) {
     display: none;
   }
