@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Salade de la joie perdue": "Salad of lost joy",
     "Les larmes de la tulipe": "The tears of the tulip",
     "Grands-pères dans le sirop d'érables": "Grandfathers in maple syrup",
+    "Aucun résultat": "No results",
   };
 
   const dictionaryEnToFr = {
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Salad of lost joy": "Salade de la joie perdue",
     "The tears of the tulip": "Les larmes de la tulipe",
     "Grandfathers in maple syrup": "Grands-pères dans le sirop d'érables",
+    "No results": "Aucun résultat",
   };
 
   const classList = [
@@ -67,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ".search-input",
     ".filter-option",
     ".footer-translate",
+    ".no-results-message",
   ];
 
   function translateFrToEn() {
@@ -134,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Créer le message "Aucun résultat" une seule fois
   const noResultsMessage = document.createElement("p");
-  noResultsMessage.id = "no-results-message";
+  noResultsMessage.className = "no-results-message";
   noResultsMessage.textContent = "Aucun résultat";
   noResultsMessage.style.display = "none";
   mainElement.appendChild(noResultsMessage);
